@@ -1,0 +1,9 @@
+{
+  "path-intellisense.mappings": {
+    "@": "${workspaceRoot}/src"
+  },
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#ac0cdc",
+    "titleBar.activeForeground": "#530062"
+  },
+}

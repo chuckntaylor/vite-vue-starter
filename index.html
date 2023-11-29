@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- START Container Queries Polyfill -->
+    <script>
+      const supportsContainerQueries = 'container' in document.documentElement.style
+      if (!supportsContainerQueries) {
+        console.log('Polyfilling container queries')
+        import(
+          'https://cdn.jsdelivr.net/npm/container-query-polyfill@1/dist/container-query-polyfill.modern.js'
+        )
+      }
+    </script>
+    <!-- END Container Queries Polyfill -->
+    <title>Vite + Vue + TS</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
