@@ -1,4 +1,4 @@
-# Trupanion + Royal Canin — Food Pilot
+# Starter Project
 
 This single page application (SPA) is for the food pilot program with Trupanion and Royal Canin. The application is primarily built with the following technologies:
 
