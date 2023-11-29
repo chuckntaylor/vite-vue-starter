@@ -69,3 +69,7 @@ npm run build
 # Deployment
 
 When deploying the application, the `dist` folder is the only folder that needs to be deployed. The `dist` folder contains all the files needed to run the application.
+
+A thorough guide for deployment can be found in the [Vite documentation](https://vitejs.dev/guide/static-deploy.html).
+
+On that page is a section for [Azure Static Web Apps](https://vitejs.dev/guide/static-deploy.html#azure-static-web-apps)
