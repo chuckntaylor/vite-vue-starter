@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-center justify-center gap-8">
-    <h1 class="text-5xl font-black font-mont text-sky-950">PAGE 1</h1>
+    <h1 class="text-5xl text-sky-950 font-black font-mont">PAGE 1</h1>
     <Counter />
     <router-link
       class="flex items-center text-lg font-black underline underline-offset-2"

@@ -1,12 +1,12 @@
 <template>
   <div class="flex flex-col items-center justify-center gap-8">
-    <h1 class="text-5xl font-black font-mont text-sky-950">PAGE 2</h1>
+    <h1 class="text-5xl text-sky-950 font-black font-mont">PAGE 2</h1>
     <div class="border-2 border-sky-900 rounded-lg bg-sky-700 p-6 shadow-lg shadow-sky-700/50">
-      <div class="min-w-sm flex flex-row items-center gap-2 text-2xl font-bold text-sky-50">
+      <div class="min-w-sm flex flex-row items-center gap-2 text-2xl text-sky-50 font-bold">
         <p>Count:</p>
         <span>{{ count }}</span>
       </div>
-      <p class="mt-2 text-sm italic text-sky-200">Current count from state management</p>
+      <p class="mt-2 text-sm text-sky-200 italic">Current count from state management</p>
     </div>
     <router-link
       class="flex items-center text-lg font-black underline underline-offset-2"
