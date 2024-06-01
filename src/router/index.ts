@@ -1,4 +1,5 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import type { RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import { RouteName } from './RouteName'
 
 const routes: Array<RouteRecordRaw> = [
@@ -25,7 +26,8 @@ const router = createRouter({
   scrollBehavior(_1, _2, savedPosition) {
     if (savedPosition) {
       return savedPosition
-    } else {
+    }
+    else {
       return { top: 0, left: 0 }
     }
   },

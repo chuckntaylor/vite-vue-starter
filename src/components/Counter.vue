@@ -1,3 +1,18 @@
+<script setup lang="ts">
+import { storeToRefs } from 'pinia'
+import { useCoreStore } from '@/store/useCoreStore'
+// Icons
+import AddIcon from '~icons/material-symbols/add-rounded'
+import SubtractIcon from '~icons/material-symbols/remove-rounded'
+
+/* -----------------------------
+  State
+----------------------------- */
+const coreStore = useCoreStore()
+const { count } = storeToRefs(coreStore)
+const { increment, decrement } = coreStore
+</script>
+
 <template>
   <div class="border-2 border-sky-900 rounded-lg bg-sky-700 p-6 shadow-lg shadow-sky-700/50">
     <div class="min-w-sm flex flex-row items-center gap-2 text-2xl text-sky-50 font-bold">
@@ -24,18 +39,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { useCoreStore } from '@/store/useCoreStore'
-import { storeToRefs } from 'pinia'
-// Icons
-import AddIcon from '~icons/material-symbols/add-rounded'
-import SubtractIcon from '~icons/material-symbols/remove-rounded'
-
-/* -----------------------------
-  State
------------------------------ */
-const coreStore = useCoreStore()
-const { count } = storeToRefs(coreStore)
-const { increment, decrement } = coreStore
-</script>

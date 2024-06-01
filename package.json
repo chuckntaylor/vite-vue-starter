@@ -1,8 +1,8 @@
 {
   "name": "starter-project",
-  "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
@@ -20,10 +20,11 @@
     "@julr/unocss-preset-forms": "^0.1.0",
     "@nabla/vite-plugin-eslint": "^2.0.4",
     "@types/node": "^20.13.0",
-    "@unocss/eslint-config": "^0.60.3",
+    "@unocss/eslint-plugin": "^0.60.3",
     "@vitejs/plugin-vue": "^5.0.5",
     "@vue/test-utils": "^2.4.6",
     "eslint": "^9.4.0",
+    "eslint-plugin-format": "^0.1.1",
     "jsdom": "^24.1.0",
     "typescript": "^5.4.5",
     "unocss": "^0.60.3",
