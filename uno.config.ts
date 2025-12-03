@@ -1,10 +1,10 @@
-import { defineConfig, presetUno, presetWebFonts } from 'unocss'
-import { presetForms } from '@julr/unocss-preset-forms'
-import transformerDirectives from '@unocss/transformer-directives'
+import { defineConfig, presetWebFonts, presetWind4, transformerDirectives } from 'unocss'
+import { presetForms } from './presetForms'
 
 export default defineConfig({
   presets: [
-    presetUno(),
+    presetWind4(),
+    presetForms(),
     presetWebFonts({
       provider: 'google',
       fonts: {
@@ -19,7 +19,6 @@ export default defineConfig({
         ],
       },
     }),
-    presetForms(),
   ],
   transformers: [transformerDirectives()],
   theme: {
@@ -51,37 +50,37 @@ export default defineConfig({
     },
     breakpoints: {
       '2xs': '428px',
-      xxs: '428px',
-      xs: '576px',
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
+      'xxs': '428px',
+      'xs': '576px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
       '2xl': '1536px',
     },
     containers: {
       // Containers based on the *true* screen size breakpoint
       '3xs': '(min-width: 320px)' /* 320px */,
       '2xs': '(min-width: 428px)' /* 428px */,
-      xs: '(min-width: 576px)' /* 576px */,
-      sm: '(min-width: 640px)' /* 640px */,
-      md: '(min-width: 768px)' /* 768px */,
-      lg: '(min-width: 1024px)' /* 1024px */,
-      xl: '(min-width: 1280px)' /* 1280px */,
+      'xs': '(min-width: 576px)' /* 576px */,
+      'sm': '(min-width: 640px)' /* 640px */,
+      'md': '(min-width: 768px)' /* 768px */,
+      'lg': '(min-width: 1024px)' /* 1024px */,
+      'xl': '(min-width: 1280px)' /* 1280px */,
       '2xl': '(min-width: 1536px)' /* 1536px */,
       // Containers based on the container 'c' size
-      c2xs: '(min-width: 16rem)' /* 256px */,
-      cxs: '(min-width: 20rem)' /* 320px */,
-      csm: '(min-width: 24rem)' /* 384px */,
-      cmd: '(min-width: 28rem)' /* 448px */,
-      clg: '(min-width: 32rem)' /* 512px */,
-      cxl: '(min-width: 36rem)' /* 576px */,
-      c2xl: '(min-width: 42rem)' /* 672px */,
-      c3xl: '(min-width: 48rem)' /* 768px */,
-      c4xl: '(min-width: 56rem)' /* 896px */,
-      c5xl: '(min-width: 64rem)' /* 1024px */,
-      c6xl: '(min-width: 72rem)' /* 1152px */,
-      c7xl: '(min-width: 80rem)' /* 1280px */,
+      'c2xs': '(min-width: 16rem)' /* 256px */,
+      'cxs': '(min-width: 20rem)' /* 320px */,
+      'csm': '(min-width: 24rem)' /* 384px */,
+      'cmd': '(min-width: 28rem)' /* 448px */,
+      'clg': '(min-width: 32rem)' /* 512px */,
+      'cxl': '(min-width: 36rem)' /* 576px */,
+      'c2xl': '(min-width: 42rem)' /* 672px */,
+      'c3xl': '(min-width: 48rem)' /* 768px */,
+      'c4xl': '(min-width: 56rem)' /* 896px */,
+      'c5xl': '(min-width: 64rem)' /* 1024px */,
+      'c6xl': '(min-width: 72rem)' /* 1152px */,
+      'c7xl': '(min-width: 80rem)' /* 1280px */,
     },
   },
   rules: [
@@ -91,7 +90,7 @@ export default defineConfig({
     [
       'transition-grid-rows',
       {
-        display: 'grid',
+        'display': 'grid',
         'transition-property': 'grid-template-rows',
         'transition-timing-function': 'cubic-bezier(0.4, 0, 0.2, 1)',
         'transition-duration': '150ms',
@@ -101,7 +100,7 @@ export default defineConfig({
     ['grid-collapse', { 'grid-template-rows': '0fr' }],
     ['grid-expand', { 'grid-template-rows': '1fr' }],
     // inline icon
-    ['icon', { 'vertical-align': '-0.125em', display: 'inline', height: '1em' }],
+    ['icon', { 'vertical-align': '-0.125em', 'display': 'inline', 'height': '1em' }],
     // text-shadow
     ['text-shadow-sm', { 'text-shadow': '0 1px 2px var(--un-shadow-color)' }],
     ['text-shadow', { 'text-shadow': '0 2px 4px var(--un-shadow-color)' }],
