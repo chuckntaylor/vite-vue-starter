@@ -6,7 +6,6 @@ import { router } from '@/router'
 import App from './App.vue'
 
 // CSS
-import '@unocss/reset/tailwind.css'
 import 'virtual:uno.css'
 import '@/assets/css/index.css'
 

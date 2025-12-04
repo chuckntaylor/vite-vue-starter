@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Mont';
-  src: url('@/assets/fonts/Mont-Bold.woff2') format('woff2'),
+  src:
+    url('@/assets/fonts/Mont-Bold.woff2') format('woff2'),
     url('@/assets/fonts/Mont-Bold.woff') format('woff'),
     url('@/assets/fonts/Mont-Bold.ttf') format('truetype'),
     url('@/assets/fonts/Mont-Bold.eot') format('embedded-opentype');
@@ -15,4 +16,8 @@ html {
 
 body {
   @apply text-copy;
+}
+
+@theme {
+  --container-csm: 24rem;
 }

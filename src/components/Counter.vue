@@ -14,8 +14,8 @@ const { increment, decrement } = coreStore
 </script>
 
 <template>
-  <div class="p-6 border-2 border-sky-900 rounded-lg bg-sky-700 shadow-lg shadow-sky-700/50">
-    <div class="text-2xl text-sky-50 font-bold flex flex-row gap-2 min-w-sm items-center">
+  <div class="p-6 border-2 border-sky-900 rounded-lg bg-hero-blue-500 @container max-w-sm w-full shadow-lg shadow-sky-700/50 lg:max-w-xl">
+    <div class="text-base text-sky-50 font-bold flex flex-row gap-2 items-center @md:text-xl">
       <p>Count:</p>
       <span>{{ count }}</span>
     </div>

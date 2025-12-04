@@ -3,7 +3,11 @@ import { presetForms } from './presetForms'
 
 export default defineConfig({
   presets: [
-    presetWind4(),
+    presetWind4({
+      preflights: {
+        reset: true,
+      },
+    }),
     presetForms(),
     presetWebFonts({
       provider: 'google',
@@ -24,8 +28,8 @@ export default defineConfig({
   theme: {
     colors: {
       // Example color additions
-      transparent: 'transparent',
-      heroBlue: {
+      'transparent': 'transparent',
+      'hero-blue': {
         DEFAULT: '#28396F',
         50: '#EAEBF1',
         100: '#D4D7E2',
@@ -48,7 +52,7 @@ export default defineConfig({
         950: '#04060B',
       },
     },
-    breakpoints: {
+    breakpoint: {
       '2xs': '428px',
       'xxs': '428px',
       'xs': '576px',
@@ -58,29 +62,29 @@ export default defineConfig({
       'xl': '1280px',
       '2xl': '1536px',
     },
-    containers: {
+    container: {
       // Containers based on the *true* screen size breakpoint
-      '3xs': '(min-width: 320px)' /* 320px */,
-      '2xs': '(min-width: 428px)' /* 428px */,
-      'xs': '(min-width: 576px)' /* 576px */,
-      'sm': '(min-width: 640px)' /* 640px */,
-      'md': '(min-width: 768px)' /* 768px */,
-      'lg': '(min-width: 1024px)' /* 1024px */,
-      'xl': '(min-width: 1280px)' /* 1280px */,
-      '2xl': '(min-width: 1536px)' /* 1536px */,
+      '3xs': '320px', // 320px
+      '2xs': '428px', // 428px
+      'xs': '576px', // 576px
+      'sm': '640px', // 640px
+      'md': '768px', // 768px
+      'lg': '1024px', // 1024px
+      'xl': '1280px', // 1280px
+      '2xl': '1536px', // 1536px
       // Containers based on the container 'c' size
-      'c2xs': '(min-width: 16rem)' /* 256px */,
-      'cxs': '(min-width: 20rem)' /* 320px */,
-      'csm': '(min-width: 24rem)' /* 384px */,
-      'cmd': '(min-width: 28rem)' /* 448px */,
-      'clg': '(min-width: 32rem)' /* 512px */,
-      'cxl': '(min-width: 36rem)' /* 576px */,
-      'c2xl': '(min-width: 42rem)' /* 672px */,
-      'c3xl': '(min-width: 48rem)' /* 768px */,
-      'c4xl': '(min-width: 56rem)' /* 896px */,
-      'c5xl': '(min-width: 64rem)' /* 1024px */,
-      'c6xl': '(min-width: 72rem)' /* 1152px */,
-      'c7xl': '(min-width: 80rem)' /* 1280px */,
+      'c2xs': '16rem', /* 256px */
+      'cxs': '20rem', /* 320px */
+      'csm': '24rem', /* 384px */
+      'cmd': '28rem', /* 448px */
+      'clg': '32rem', /* 512px */
+      'cxl': '36rem', /* 576px */
+      'c2xl': '42rem', /* 672px */
+      'c3xl': '48rem', /* 768px */
+      'c4xl': '56rem', /* 896px */
+      'c5xl': '64rem', /* 1024px */
+      'c6xl': '72rem', /* 1152px */
+      'c7xl': '80rem', /* 1280px */
     },
   },
   rules: [
