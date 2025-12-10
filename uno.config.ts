@@ -25,6 +25,28 @@ export default defineConfig({
     }),
   ],
   transformers: [transformerDirectives()],
+  variants: [
+    // pointer variants
+    (matcher) => {
+      const pointerMatch = matcher.match(/^pointer-(fine|coarse|none):/)
+      if (pointerMatch) {
+        return {
+          matcher: matcher.slice(pointerMatch[0].length),
+          parent: `@media (pointer: ${pointerMatch[1]})`,
+        }
+      }
+    },
+    // any-pointer variants
+    (matcher) => {
+      const anyPointerMatch = matcher.match(/^any-pointer-(fine|coarse|none):/)
+      if (anyPointerMatch) {
+        return {
+          matcher: matcher.slice(anyPointerMatch[0].length),
+          parent: `@media (any-pointer: ${anyPointerMatch[1]})`,
+        }
+      }
+    },
+  ],
   theme: {
     colors: {
       // Example color additions

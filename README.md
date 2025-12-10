@@ -40,6 +40,42 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
    2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
 2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
 
+## UnoCSS Configuration
+
+This project was updated to use the `presetWind4` preset for UnoCSS. This preset provides better compatibility with TailwindCSS v4 and newer features.
+
+The `uno.config.ts` file needed to be rewritten.
+Variants were added to support container queries and pointer variants.
+
+### Explanation of Pointer Variants
+
+The difference between `pointer` and `any-pointer` is about which pointing devices they detect:
+
+`pointer` variants - Checks the primary pointing device:
+
+`pointer-fine`: - Primary device is accurate (mouse/trackpad)
+`pointer-coarse`: - Primary device is less accurate (touchscreen)
+`pointer-none`: - No primary pointing device
+`any-pointer` variants - Checks if ANY pointing device meets the criteria:
+
+`any-pointer-fine`: - At least one connected device is accurate
+`any-pointer-coarse`: - At least one connected device is less accurate
+`any-pointer-none`: - No pointing devices at all
+
+**Example scenario:**
+A laptop with a trackpad (fine) also has a touchscreen (coarse):
+
+`pointer-fine`: would match (trackpad is primary)
+`pointer-coarse`: would NOT match
+`any-pointer-fine`: would match (trackpad exists)
+`any-pointer-coarse`: would ALSO match (touchscreen exists)
+
+**When to use which:**
+
+Use `pointer-*` when you want to optimize for the primary input method
+Use `any-pointer-*` when you want to accommodate all possible input methods on a device
+For example, `any-pointer-coarse:p-4` could add extra padding if ANY touch capability exists, even if the user is currently using a mouse.
+
 # Vue 3 + TypeScript + Vite
 
 ## Install
